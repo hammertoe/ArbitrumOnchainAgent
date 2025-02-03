@@ -4,6 +4,8 @@ extern crate alloc;
 
 /// Import items from the SDK. The prelude contains common traits and macros.
 use stylus_sdk::{alloy_primitives::{Address, I32, U32, U256, FixedBytes}, prelude::*};
+use stylus_sdk::{alloy_sol_types::sol, evm};
+
 use stylus_sdk::storage::{StorageArray, StorageI32, StorageAddress, StorageU32};
 use std::fmt::Write;
 use std::fmt;
@@ -51,6 +53,9 @@ impl Action {
     }
 }
 
+sol! {
+    event TrainingCompleted();
+}
 
 #[entrypoint]
 
@@ -176,6 +181,7 @@ impl Contract {
                 }
             }
         }
+        evm::log(TrainingCompleted{});
     }
 
     /// Generate dynamic SVG metadata that visualizes the maze and overlays an arrow
