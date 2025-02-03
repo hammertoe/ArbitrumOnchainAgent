@@ -1,4 +1,4 @@
-# Q-Learning Maze NFT Workshop
+# Arbitrum On-Chain AI Agent - Q-Learning Maze NFT Workshop
 
 This repository demonstrates how to implement AI agents that execute directly on-chain using Arbitrum Stylus. The project was created as part of the ETHGlobal Agenttic Ethereum Hackathon, showcasing the potential of running AI algorithms directly within smart contracts.
 
